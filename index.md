@@ -4,7 +4,7 @@ As a child I loved to pull things apart to try to understand them and I see no r
 
 ## Python and R
 
-### Page 1: The Basic Objects 
+### The Basic Objects 
 
 Let's start with Python. Building the basic python object in C++ will probably require standard C libraries:
 
@@ -55,6 +55,79 @@ typedef struct _object {
 } PyObject;
 ```
 
+Next R
 
+Rather than taking an object and creating typed objects from it, the basic R object (SEXPREC) has a changeable attribute to define which data type it refers to.
+
+```
+typedef unsigned int SEXPTYPE;
+
+#define NILSXP         0      /* nil = NULL */
+#define SYMSXP         1      /* symbols */
+#define LISTSXP         2      /* lists of dotted pairs */
+#define CLOSXP         3      /* closures */
+#define ENVSXP         4      /* environments */
+#define PROMSXP         5      /* promises: [un]evaluated closure arguments */
+#define LANGSXP         6      /* language constructs (special lists) */
+#define SPECIALSXP   7      /* special forms */
+#define BUILTINSXP   8      /* builtin non-special forms */
+#define CHARSXP         9      /* "scalar" string type (internal only)*/
+#define LGLSXP        10      /* logical vectors */
+/* 11 and 12 were factors and ordered factors in the 1990s */
+#define INTSXP        13      /* integer vectors */
+#define REALSXP        14      /* real variables */
+#define CPLXSXP        15      /* complex variables */
+#define STRSXP        16      /* string vectors */
+#define DOTSXP        17      /* dot-dot-dot object */
+#define ANYSXP        18      /* make "any" args work.
+Used in specifying types for symbol
+registration to mean anything is okay  */
+#define VECSXP        19      /* generic vectors */
+#define EXPRSXP        20      /* expressions vectors */
+#define BCODESXP    21    /* byte code */
+#define EXTPTRSXP   22    /* external pointer */
+#define WEAKREFSXP  23    /* weak reference */
+#define RAWSXP      24    /* raw bytes */
+#define S4SXP       25    /* S4, non-vector */
+
+/* used for detecting PROTECT issues in memory.c */
+#define NEWSXP      30    /* fresh node created in new page */
+#define FREESXP     31    /* node released by GC */
+
+#define FUNSXP      99    /* Closure or Builtin or Special */
+;
+typedef enum {
+    NILSXP    = 0,    /* nil = NULL */
+    SYMSXP    = 1,    /* symbols */
+    LISTSXP    = 2,    /* lists of dotted pairs */
+    CLOSXP    = 3,    /* closures */
+    ENVSXP    = 4,    /* environments */
+    PROMSXP    = 5,    /* promises: [un]evaluated closure arguments */
+    LANGSXP    = 6,    /* language constructs (special lists) */
+    SPECIALSXP    = 7,    /* special forms */
+    BUILTINSXP    = 8,    /* builtin non-special forms */
+    CHARSXP    = 9,    /* "scalar" string type (internal only)*/
+    LGLSXP    = 10,    /* logical vectors */
+    INTSXP    = 13,    /* integer vectors */
+    REALSXP    = 14,    /* real variables */
+    CPLXSXP    = 15,    /* complex variables */
+    STRSXP    = 16,    /* string vectors */
+    DOTSXP    = 17,    /* dot-dot-dot object */
+    ANYSXP    = 18,    /* make "any" args work */
+    VECSXP    = 19,    /* generic vectors */
+    EXPRSXP    = 20,    /* expressions vectors */
+    BCODESXP    = 21,    /* byte code */
+    EXTPTRSXP    = 22,    /* external pointer */
+    WEAKREFSXP    = 23,    /* weak reference */
+    RAWSXP    = 24,    /* raw bytes */
+    S4SXP    = 25,    /* S4 non-vector */
+    
+    NEWSXP      = 30,   /* fresh node creaed in new page */
+    FREESXP     = 31,   /* node released by GC */
+    
+    FUNSXP    = 99    /* Closure or Builtin */
+} SEXPTYPE
+
+```
 
 
