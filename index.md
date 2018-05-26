@@ -43,12 +43,18 @@ struct _object *_ob_next;
 struct _object *_ob_prev;
 ```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+Struct A structure creates a data type that can be used to group items of possibly different types into a single type
 
-### Jekyll Themes
+*, returns a pointer to the memory address of an object
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/AlekJSmith/Learn-the-Rebuilding-Way-/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+```
+typedef struct _object {
+    _PyObject_HEAD_EXTRA
+    Py_ssize_t ob_refcnt;
+    struct _typeobject *ob_type;
+} PyObject;
+```
 
-### Support or Contact
 
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+
+
