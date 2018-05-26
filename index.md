@@ -1,10 +1,17 @@
-Learn the Rebuilding Way!
+# Learn the Rebuilding Way!
 
 As a child I loved to pull things apart to try to understand them and I see no reason as an adult not to apply the same principle to programming languages.
 
-### Markdown
+## R and Python
+
+### Page 1: The Basic Objects 
 
 Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+
+```markdown
+
+```
+
 
 ```markdown
 Syntax highlighted code block
