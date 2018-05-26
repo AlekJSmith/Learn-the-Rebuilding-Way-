@@ -2,14 +2,17 @@
 
 As a child I loved to pull things apart to try to understand them and I see no reason as an adult not to apply the same principle to programming languages.
 
-## R and Python
+## Python and R
 
 ### Page 1: The Basic Objects 
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+Let's start with Python. Building the basic python object in C++ will probably require standard C libraries:
 
-```markdown
-
+```
+#include <iostream>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h> 
 ```
 
 
