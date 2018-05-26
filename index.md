@@ -1,8 +1,6 @@
-## Welcome to GitHub Pages
+Learn the Rebuilding Way!
 
-You can use the [editor on GitHub](https://github.com/AlekJSmith/Learn-the-Rebuilding-Way-/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
-
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+As a child I loved to pull things apart to try to understand them and I see no reason as an adult not to apply the same principle to programming languages.
 
 ### Markdown
 
