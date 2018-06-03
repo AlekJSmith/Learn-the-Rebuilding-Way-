@@ -186,6 +186,8 @@ typedef struct SEXPREC {
 ```
 ### The "essential bit" of each language or why I started caring about referencing
 
+Both Python and R have some capacity to perform Object Oritentated Programming (OOP) and Functional "Style" Programming (FSP). However, clear preferences exist as Python was built from the ground up with OOP in mind, while R clearly aims for FSP.
+
 As shown above, Pythonic objects have four noteable traits:
 
    -they ultimately are descendents of the PyObject;
@@ -193,10 +195,20 @@ As shown above, Pythonic objects have four noteable traits:
    -objects are built from other objects by referencing those objects, picking up data and methods along the way;
    -each object records the numbers of objects referecning it.
 
-These seem to be the building blocks of the "Pythonic Data Model" and explain two of the important traits of Pytho:
+These seem to be the building blocks of the "Pythonic Data Model" and explain three of the important traits of Python:
 
    -The Dunder attributes and magic methods, which come from the PyObject C structure and thanks to all objects being 
-    descended from PyObject become common traits for all object throughout Python:   
+    descended from PyObject become common traits for all object throughout Python;
+   -Python uses "reference passing", which refers to Python Methods and Functions using the current version of the objects .       that are supplied to them as inputs;
+   -The garbage collector will only consider objects which are not referenced.
+   
+ The R SEXPREC object however is used to construct object to handle the process of a function:
+ 
+ SYMSXP, symbols
+ EXPRSXP, expressions
+ LANGSXP, language constructs
+ ENVSXP, environments
+ CLOSXP, closures
 
 
 
