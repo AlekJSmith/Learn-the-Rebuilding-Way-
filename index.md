@@ -184,4 +184,19 @@ typedef struct SEXPREC {
     } u;
 } SEXPREC
 ```
+### The "essential bit" of each language or why I started caring about referencing
+
+As shown above, Pythonic objects have four noteable traits:
+
+   -they ultimately are descendents of the PyObject;
+   -they contain both the data and methods for that data;
+   -objects are built from other objects by referencing those objects, picking up data and methods along the way;
+   -each object records the numbers of objects referecning it.
+
+These seem to be the building blocks of the "Pythonic Data Model" and explain two of the important traits of Pytho:
+
+   -The Dunder attributes and magic methods, which come from the PyObject C structure and thanks to all objects being 
+    descended from PyObject become common traits for all object throughout Python:   
+
+
 
