@@ -202,6 +202,16 @@ These seem to be the building blocks of the "Pythonic Data Model" and explain th
    -Python uses "reference passing", which refers to Python Methods and Functions using the current version of the objects .       that are supplied to them as inputs;
    -The garbage collector will only consider objects which are not referenced.
    
+ In R the Data structures, symbols/names, environments and functions are built from the different SEXPREC types. This leads to the noteable attributes of R:
+ 
+    -Environments are objects 
+ 
+ R functions have the following traits:
+ 
+ Functions are not automatically bound to a name
+ Side effects are minimized thanks to the way that call by value works
+ 
+ 
  The R SEXPREC object however is used to construct object to handle the process of a function:
  
  SYMSXP, symbols
