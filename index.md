@@ -223,3 +223,34 @@ These seem to be the building blocks of the "Pythonic Data Model" and explain th
 
 
 
+
+
+
+
+Python
+
+The Python evaulator reads the supplied code and transforms it to bytecode 
+
+dis.dis('x=10; y=2; z=x*y')
+
+  1           0 LOAD_CONST               0 (10)
+              2 STORE_NAME               0 (x)
+              4 LOAD_CONST               1 (2)
+              6 STORE_NAME               1 (y)
+              8 LOAD_NAME                0 (x)
+             10 LOAD_NAME                1 (y)
+             12 BINARY_MULTIPLY
+             14 STORE_NAME               2 (z)
+             16 LOAD_CONST               2 (None)
+             18 RETURN_VALUE
+
+However the second a function is called you can see that "CALL_FUNCTION" seems to be a black box 
+
+dis.dis('exp(2)')
+  1           0 LOAD_NAME                0 (exp)
+              2 LOAD_CONST               0 (2)
+              4 CALL_FUNCTION            1
+              6 RETURN_VALUE
+
+
+
