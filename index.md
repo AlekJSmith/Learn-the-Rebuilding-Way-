@@ -231,6 +231,7 @@ Python
 
 The Python evaulator reads the supplied code and transforms it to bytecode 
 
+```
 dis.dis('x=10; y=2; z=x*y')
 
   1           0 LOAD_CONST               0 (10)
@@ -243,14 +244,16 @@ dis.dis('x=10; y=2; z=x*y')
              14 STORE_NAME               2 (z)
              16 LOAD_CONST               2 (None)
              18 RETURN_VALUE
+```
 
 However the second a function is called you can see that "CALL_FUNCTION" seems to be a black box 
 
+```
 dis.dis('exp(2)')
   1           0 LOAD_NAME                0 (exp)
               2 LOAD_CONST               0 (2)
               4 CALL_FUNCTION            1
               6 RETURN_VALUE
-
+```
 
 
