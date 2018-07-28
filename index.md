@@ -225,7 +225,7 @@ These seem to be the building blocks of the "Pythonic Data Model" and explain th
 
 
 
-
+###The Python and R Virtual Machines (Yes R has one too, it is just optional) 
 
 Python
 
