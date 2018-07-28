@@ -257,3 +257,8 @@ dis.dis('exp(2)')
 ```
 
 
+
+
+###The distributions of R
+
+R stores the distributions in 'src/nmath'. The basic structure of these distributions is to check the validity of the entered parameters and then use the log density of a distribution.
